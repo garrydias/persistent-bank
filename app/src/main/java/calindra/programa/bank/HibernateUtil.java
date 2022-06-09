@@ -34,6 +34,7 @@ public class HibernateUtil {
 				properties.put("hbm2ddl.auto", "create-drop");
 
 				configuration.setProperties(properties);
+				configuration.addAnnotatedClass(User.class);
 
 				ServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
 					.applySettings(configuration.getProperties())
