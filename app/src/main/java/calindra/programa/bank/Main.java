@@ -8,6 +8,10 @@ import java.util.Scanner;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+/**
+ * Referencia: https://dzone.com/articles/hibernate-5-java-configuration-example
+ * Plugin: MySQL Manager - Weijan Chen
+ */
 public class Main {
     public static void main(String[] args) {
 

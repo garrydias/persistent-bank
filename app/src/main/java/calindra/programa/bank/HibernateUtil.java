@@ -27,8 +27,8 @@ public class HibernateUtil {
 
 				Properties properties = new Properties();
 				properties.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-				properties.put(Environment.URL, "jdbc:mysql://localhost:3306/ipretty");
-				properties.put(Environment.USER, "ipretty");
+				properties.put(Environment.URL, "jdbc:mysql://localhost:3306/persistent-bank");
+				properties.put(Environment.USER, "calindra");
 				properties.put(Environment.PASS, "4321");
 				properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
 				properties.put(Environment.SHOW_SQL, "true");
