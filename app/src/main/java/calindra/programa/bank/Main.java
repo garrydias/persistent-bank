@@ -10,22 +10,21 @@ import org.hibernate.Transaction;
 
 public class Main {
     public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        RunningOption selectedOption = RunningOption.CONTINUE;
+
+        // List<User> users = new ArrayList<>();
+
+        String userName, userEmail, userPhone;
+
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            transaction = session.beginTransaction();
-
-
-
-
-            Scanner scanner = new Scanner(System.in);
-
-            RunningOption selectedOption = RunningOption.CONTINUE;
-
-            // List<User> users = new ArrayList<>();
-
-            String userName, userEmail, userPhone;
-
+           
             while (RunningOption.CONTINUE.equals(selectedOption)) {
+
+                transaction = session.beginTransaction();
 
                 System.out.printf("Nome de Usuario: ");
                 userName = scanner.nextLine();
@@ -44,6 +43,7 @@ public class Main {
 
                 // users.add(user);
                 session.save(user);
+                session.getTransaction().commit();
 
                 System.out.println("Continuar cadastrando Usuarios? S/N");
                 String keepInsertingAnswer = scanner.nextLine().toUpperCase();
@@ -51,22 +51,21 @@ public class Main {
                 if (!"S".equals(keepInsertingAnswer)) {
                     selectedOption = RunningOption.FINISH;
                 }
+
             }
 
-            scanner.close();
-
-            System.out.println("Bye!");
-
-
-
-            session.getTransaction().commit();
             HibernateUtil.shutdown();
         } catch (Exception e) {
-            if(transaction != null) {
+            if (transaction != null) {
                 transaction.rollback();
             }
             e.printStackTrace();
         }
+
+
+        scanner.close();
+
+        System.out.println("Bye!");
 
     }
 }
