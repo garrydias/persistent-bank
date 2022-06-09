@@ -9,6 +9,7 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 
 import static java.util.Map.entry;
@@ -25,13 +26,13 @@ public class HibernateUtil {
 				Configuration configuration = new Configuration();
 
 				Properties properties = new Properties();
-				properties.put("hibernate.connection.driver_class", "com.mysql.cj.jdbc.Driver");
-				properties.put("hibernate.connection.url", "jdbc:mysql://localhost:3306/ipretty");
-				properties.put("hibernate.connection.username", "ipretty");
-				properties.put("hibernate.connection.password", "4321");
-				properties.put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
-				properties.put("show_sql", "true");
-				properties.put("hbm2ddl.auto", "create-drop");
+				properties.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
+				properties.put(Environment.URL, "jdbc:mysql://localhost:3306/ipretty");
+				properties.put(Environment.USER, "ipretty");
+				properties.put(Environment.PASS, "4321");
+				properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
+				properties.put(Environment.SHOW_SQL, "true");
+				properties.put(Environment.HBM2DDL_AUTO, "update");
 
 				configuration.setProperties(properties);
 				configuration.addAnnotatedClass(User.class);
