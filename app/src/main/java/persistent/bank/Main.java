@@ -1,8 +1,6 @@
-package calindra.programa.bank;
+package persistent.bank;
 
 import java.text.MessageFormat;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import org.hibernate.Session;

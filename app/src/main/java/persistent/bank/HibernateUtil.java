@@ -1,12 +1,7 @@
-package calindra.programa.bank;
-import java.util.HashMap;
-import java.util.Map;
+package persistent.bank;
 import java.util.Properties;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.Metadata;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
@@ -36,6 +31,7 @@ public class HibernateUtil {
 
 				configuration.setProperties(properties);
 				configuration.addAnnotatedClass(User.class);
+				configuration.addAnnotatedClass(Operation.class);
 
 				ServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
 					.applySettings(configuration.getProperties())

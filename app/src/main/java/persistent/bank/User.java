@@ -1,4 +1,4 @@
-package calindra.programa.bank;
+package persistent.bank;
 
 import java.util.UUID;
 
