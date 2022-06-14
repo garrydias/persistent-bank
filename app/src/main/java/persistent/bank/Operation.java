@@ -13,6 +13,7 @@ public class Operation {
     
     private String type;
     private long date;
+    private String value;
 
     public int getId() {
         return id;
@@ -32,4 +33,11 @@ public class Operation {
     public void setDate(long date) {
         this.date = date;
     }
+    public String getValue() {
+        return value;
+    }
+    public void setValue(String value) {
+        this.value = value;
+    }
+    
 }

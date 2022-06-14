@@ -26,7 +26,7 @@ public class HibernateUtil {
 				properties.put(Environment.USER, "calindra");
 				properties.put(Environment.PASS, "4321");
 				properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
-				properties.put(Environment.SHOW_SQL, "true");
+				properties.put(Environment.SHOW_SQL, "false");
 				properties.put(Environment.HBM2DDL_AUTO, "create");
 
 				configuration.setProperties(properties);

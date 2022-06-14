@@ -28,7 +28,7 @@ public class StatementRepositoryTest {
 
         Operation operation2 = new Operation();
         operation2.setDate(System.currentTimeMillis());
-        operation2.setType("SAQUE");
+        operation2.setType("TRANSFERENCIA");
 
         OperationRepository operationRepository = new OperationRepository();
         operationRepository.save(operation1);
