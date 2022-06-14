@@ -16,7 +16,7 @@ public class HibernateUtil {
 	{
 		try 
 		{
-			if (sessionFactory == null) 
+			if (sessionFactory == null || sessionFactory.isClosed()) 
 			{
 				Configuration configuration = new Configuration();
 

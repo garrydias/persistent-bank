@@ -16,12 +16,13 @@ public class OperationRepository {
 
             return operation;
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             e.printStackTrace();
             if (transaction != null) {
                 transaction.rollback();
             }
+            throw e;
         }
-        return null;
     }
 
 }
