@@ -13,7 +13,6 @@ public class StatementRepositoryTest {
     void retrieveLastMinuteStatements() {
 
         // SETUP 
-       
         User user = new User();
         user.setEmail("garr@bol.com");
         user.setName("garr");
@@ -21,7 +20,6 @@ public class StatementRepositoryTest {
         UserRepository userRepository = new UserRepository();
         userRepository.save(user);
         
-
         Operation operation1 = new Operation();
         operation1.setDate(System.currentTimeMillis());
         operation1.setType("SAQUE");
@@ -34,7 +32,6 @@ public class StatementRepositoryTest {
         operationRepository.save(operation1);
         operationRepository.save(operation2);
        
-
         // RUN
         long userDesiredStart = System.currentTimeMillis() - 60000;
         long userDesiredEnd = System.currentTimeMillis();

@@ -29,10 +29,10 @@ public class HibernateUtil {
 				properties.put(Environment.SHOW_SQL, "false");
 				properties.put(Environment.HBM2DDL_AUTO, "create");
 
+				
 				configuration.setProperties(properties);
 				configuration.addAnnotatedClass(User.class);
 				configuration.addAnnotatedClass(Operation.class);
-				configuration.addAnnotatedClass(Statement.class);
 
 				ServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
 					.applySettings(configuration.getProperties())

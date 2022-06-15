@@ -1,13 +1,9 @@
 package persistent.bank;
-
 import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-
 public class OperationRepository {
-
     public Operation save(Operation operation) {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
@@ -44,7 +40,6 @@ public class OperationRepository {
 
             return operations;
         } catch (Exception e) {
-            System.out.println(e.getMessage());
             e.printStackTrace();
             if (transaction != null) {
                 transaction.rollback();

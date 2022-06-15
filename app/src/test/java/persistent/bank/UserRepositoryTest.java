@@ -20,5 +20,8 @@ public class UserRepositoryTest {
 
         Assertions.assertNotNull(persistentUser);
         Assertions.assertNotNull(persistentUser.getId());
+        Assertions.assertEquals("garr@bol.com", persistentUser.getEmail());
+        Assertions.assertEquals("garr", persistentUser.getName());
+        Assertions.assertEquals("1234567890", persistentUser.getPhone());
     }
 }
