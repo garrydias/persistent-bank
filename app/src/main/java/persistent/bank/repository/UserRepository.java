@@ -1,20 +1,22 @@
-package persistent.bank;
+package persistent.bank.repository;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class StatementRepository {
+import persistent.bank.model.entity.User;
 
-    public Statement save(Statement statement) {
+public class UserRepository {
+
+    public User save(User user) {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
 
-            session.save(statement);
+            session.save(user);
 
             session.getTransaction().commit();
 
-            return statement;
+            return user;
         } catch (Exception e) {
             System.out.println(e.getMessage());
             e.printStackTrace();

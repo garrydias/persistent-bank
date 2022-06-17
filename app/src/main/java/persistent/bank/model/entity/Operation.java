@@ -1,4 +1,4 @@
-package persistent.bank;
+package persistent.bank.model.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

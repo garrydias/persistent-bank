@@ -4,6 +4,13 @@ import java.text.MessageFormat;
 import java.util.List;
 import java.util.Scanner;
 
+import persistent.bank.model.Statement;
+import persistent.bank.model.entity.Operation;
+import persistent.bank.model.entity.User;
+import persistent.bank.repository.HibernateUtil;
+import persistent.bank.repository.OperationRepository;
+import persistent.bank.repository.UserRepository;
+
 /**
  * Referencia: https://dzone.com/articles/hibernate-5-java-configuration-example
  * Plugin: MySQL Manager - Weijan Chen

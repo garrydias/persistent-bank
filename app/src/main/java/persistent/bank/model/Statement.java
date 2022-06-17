@@ -1,6 +1,8 @@
-package persistent.bank;
+package persistent.bank.model;
 
 import java.util.List;
+
+import persistent.bank.model.entity.Operation;
 
 public record Statement(long start, long end, List<Operation> operations) {
 

@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import persistent.bank.model.entity.User;
+import persistent.bank.repository.UserRepository;
+
 public class UserRepositoryTest {
 
     @DisplayName("Teste de fumaca: Deve executar a insercao de um usuario com sucesso")

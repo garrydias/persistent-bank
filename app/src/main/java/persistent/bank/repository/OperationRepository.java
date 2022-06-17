@@ -1,8 +1,11 @@
-package persistent.bank;
+package persistent.bank.repository;
+
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+
+import persistent.bank.model.entity.Operation;
 public class OperationRepository {
     public Operation save(Operation operation) {
         Transaction transaction = null;

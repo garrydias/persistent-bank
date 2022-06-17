@@ -1,4 +1,5 @@
-package persistent.bank;
+package persistent.bank.repository;
+
 import java.util.Properties;
 
 import org.hibernate.SessionFactory;
@@ -6,6 +7,9 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
+
+import persistent.bank.model.entity.Operation;
+import persistent.bank.model.entity.User;
 
 import static java.util.Map.entry;
 
@@ -27,7 +31,7 @@ public class HibernateUtil {
 				properties.put(Environment.PASS, "4321");
 				properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
 				properties.put(Environment.SHOW_SQL, "false");
-				properties.put(Environment.HBM2DDL_AUTO, "create");
+				properties.put(Environment.HBM2DDL_AUTO, "update");
 
 				
 				configuration.setProperties(properties);

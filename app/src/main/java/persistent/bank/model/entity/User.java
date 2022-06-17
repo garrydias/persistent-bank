@@ -1,4 +1,4 @@
-package persistent.bank;
+package persistent.bank.model.entity;
 
 import java.util.UUID;
 

@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import persistent.bank.model.entity.Operation;
+import persistent.bank.repository.OperationRepository;
+
 public class OperationRepositoryTest {
 
     @DisplayName("Teste de fumaca: Deve executar a insercao de uma operacao com sucesso")
