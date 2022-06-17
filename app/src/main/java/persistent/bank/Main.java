@@ -76,7 +76,7 @@ public class Main {
 
         System.out.println("Bye!");
         
-        scanner.nextLine();
+        scanner.next();
 
         HibernateUtil.shutdown();
 

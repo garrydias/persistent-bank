@@ -6,3 +6,9 @@ build
 
 app/bin
 .idea
+
+.dccache
+
+.gitattributes
+
+.vscode
